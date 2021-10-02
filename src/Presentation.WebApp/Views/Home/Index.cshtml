@@ -1,0 +1,103 @@
+﻿@{
+    ViewData["Title"] = "Dashboard";
+}
+
+@model List<Domain.Cita>
+
+@{
+    // ToDo
+}
+
+<!--https://datatables.net/-->
+<link href="//cdn.datatables.net/1.10.25/css/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css">
+<link href="//cdn.datatables.net/buttons/1.7.1/css/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css">
+
+<div class="row">
+    <div class="col">
+        <canvas id="myChart1" class="my-4 w-100 chartjs-render-monitor"></canvas>
+    </div>
+    <div class="col">
+        <canvas id="myChart2" class="my-4 w-100 chartjs-render-monitor"></canvas>
+    </div>
+</div>
+
+<table id="myTable" class="table table-striped table-bordered">
+
+    <!-- ToDo -->
+
+</table>
+
+@section Styles{
+    <style>
+        @@keyframeschartjs-render-animation {
+            from {
+                opacity: .99
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        .chartjs-render-monitor {
+            animation: chartjs-render-animation 1ms;
+            max-height: 600px;
+            display: block;
+        }
+
+        .chartjs-size-monitor,
+        .chartjs-size-monitor-expand,
+        .chartjs-size-monitor-shrink {
+            position: absolute;
+            direction: ltr;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            overflow: hidden;
+            pointer-events: none;
+            visibility: hidden;
+            z-index: -1
+        }
+
+            .chartjs-size-monitor-expand > div {
+                position: absolute;
+                width: 1000000px;
+                height: 1000000px;
+                left: 0;
+                top: 0
+            }
+
+            .chartjs-size-monitor-shrink > div {
+                position: absolute;
+                width: 200%;
+                height: 200%;
+                left: 0;
+                top: 0
+            }
+    </style>
+}
+
+@section scripts {
+    <!--https://datatables.net/-->
+    <script src="//cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="//cdn.datatables.net/1.10.25/js/dataTables.bootstrap4.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="//cdn.datatables.net/buttons/1.7.1/js/dataTables.buttons.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="//cdn.datatables.net/buttons/1.7.1/js/buttons.bootstrap4.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js" type="text/javascript" charset="utf-8"></script>
+    <script src="//cdn.datatables.net/buttons/1.7.1/js/buttons.html5.min.js" type="text/javascript" charset="utf-8"></script>
+
+    <script>
+               // ToDo
+    </script>
+
+
+    <!--https://www.chartjs.org/-->
+    <script src="//cdn.jsdelivr.net/npm/chart.js@3.4.1/dist/chart.min.js" type="text/javascript" charset="utf-8"></script>
+    <script>
+
+                // ToDo
+    </script>
+}
