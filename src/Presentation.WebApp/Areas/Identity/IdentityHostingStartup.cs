@@ -12,7 +12,8 @@ namespace Presentation.WebApp.Areas.Identity
     {
         public void Configure(IWebHostBuilder builder)
         {
-            builder.ConfigureServices((context, services) => {
+            builder.ConfigureServices((context, services) =>
+            {
                 services.AddDbContext<IdentityDbContext>(options =>
                     options.UseSqlServer(
                         context.Configuration.GetConnectionString("IdentityDbContextConnection")));
@@ -38,7 +39,9 @@ namespace Presentation.WebApp.Areas.Identity
                     options.User.AllowedUserNameCharacters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-._@+";
                     options.User.RequireUniqueEmail = false;
 
-                }).AddEntityFrameworkStores<IdentityDbContext>();
+                })
+                .AddRoles<IdentityRole>()
+                .AddEntityFrameworkStores<IdentityDbContext>();
             });
         }
     }
